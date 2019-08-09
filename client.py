@@ -11,7 +11,7 @@ addr = 'http://0.0.0.0:5001'#Server IP Address
 test_url = addr + '/api/test'
 content_type = 'image/jpeg'
 headers = {'content-type': content_type}
-sp = dlib.shape_predictor("/Users/..") #Path to shape_predictor_5_face_landmarks.dat
+sp = dlib.shape_predictor("Path to shape_predictor_5_face_landmarks.dat") #Path to shape_predictor_5_face_landmarks.dat
 
 def match_boxes(box1, box2):
     # box is a dlib rectangle
@@ -41,8 +41,8 @@ trackers = {}
 temp_trackers = {}
 img_list = []
 name_list = []
-for names in os.listdir('/Users/My_photos'): #Path to Folder where images of known faces are stores
-    img = face_recognition.load_image_file(os.path.join('/Users/My_photos',names))#Path to Folder where images of known faces are stores
+for names in os.listdir('PATH TO FOLDER OF HEADSHOTS'): 
+    img = face_recognition.load_image_file(os.path.join('PATH TO FOLDER OF HEADSHOTS',names))
     img_enconding = face_recognition.face_encodings(img)[0]
     img_list.append(img_enconding)
     name_list.append(names.split(".")[0])
