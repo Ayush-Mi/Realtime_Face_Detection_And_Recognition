@@ -86,8 +86,8 @@ trackers = {}
 temp_trackers = {}
 img_list = []
 name_list = []
-for names in os.listdir('C:/Users/manaksh/Desktop/Ayush/Face_Detection_Recognition/Face_Detection_Recognition/photos'): # path to folder of headshots
-    img = face_recognition.load_image_file(os.path.join('C:/Users/manaksh/Desktop/Ayush/Face_Detection_Recognition/Face_Detection_Recognition/photos',names))
+for names in os.listdir('PATH TO FOLDER OF HEADSHOTS'):
+    img = face_recognition.load_image_file(os.path.join('PATH TO FOLDER OF HEADSHOTS',names))
     img_enconding = face_recognition.face_encodings(img)[0]
     img_list.append(img_enconding)
     name_list.append(names.split(".")[0])
